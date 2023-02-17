@@ -1,0 +1,151 @@
+body {
+    background-image: url("../assets/wallpaperbetter.com_7680x4320.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    outline: none!important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.w-fit-content {
+    width: fit-content;
+}
+
+.display-7 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.curr-weather-day-right-div p {
+    margin-bottom: 0!important;
+}
+.current:hover {
+    box-shadow: -2px 1px 12px 0px black;
+    -webkit-transition: box-shadow 0.3s ease-in-out 0s;
+    -moz-transition: box-shadow 0.3s ease-in-out 0s;
+    -o-transition: box-shadow 0.3s ease-in-out 0s;
+    -ms-transition: box-shadow 0.3s ease-in-out 0s;
+    transition: box-shadow 0.3s ease-in-out 0s;
+}
+
+.toggle {
+    --width: 80px;
+    --height: calc(var(--width) / 3);
+
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+  }
+
+  .toggle input {
+    display: none;
+  }
+
+  .toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: #ccc;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle .slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height) / 2);
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle input:checked+.slider {
+    background-color: #f37521;
+  }
+
+  .toggle input:checked+.slider::before {
+    transform: translateX(calc(var(--width) - var(--height)));
+  }
+
+  .toggle .labels {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-family: sans-serif;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+  }
+
+  .toggle .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 5px;
+    color: #4d4d4d;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    left: calc(var(--height) - var(--width) + 2px);
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle input:checked~.labels::after {
+    opacity: 0;
+    transform: translateX(calc(var(--width) - var(--height)));
+  }
+
+  .toggle input:checked~.labels::before {
+    opacity: 1;
+    transform: translateX(calc(var(--width) - var(--height)));
+  }
+
+@media screen and (max-width: 1500px) {
+.mw-lg-1500 {
+    max-width: 1500px;
+}
+.w-1500 {
+    width: 1500px;
+}
+.overflow-x-lg-scroll {
+    overflow-x: scroll;
+}
+}
+
+@media screen and (min-width: 600px) {
+.bg-img-md-center {
+    background-position: center;
+}
+}
+
+@media screen and (max-width: 600px) {
+.pt-6 {
+    padding-top: 6rem;
+}
+.bg-img-attatchment-sm-fixed {
+    background-attachment: fixed!important;
+}
+}
